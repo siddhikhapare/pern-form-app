@@ -143,9 +143,9 @@ data "aws_route53_zone" "main" {
 }
 
 ########################################
-# Route 53 Records  (app  → CloudFront)
+# Route 53 Records  (demo  → CloudFront)
 ########################################
-resource "aws_route53_record" "app" {
+resource "aws_route53_record" "demo" {
   zone_id = data.aws_route53_zone.main.zone_id
   name    = var.domain_name
   type    = "A"
